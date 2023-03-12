@@ -20,6 +20,5 @@ from animales import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
-    path('animales/', views.animales, name='animales'),
-    path('animales/registrar', views.registrar, name='registrar')
+    path('animales/', views.animales, name='animales')
 ]

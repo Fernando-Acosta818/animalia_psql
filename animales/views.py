@@ -1,15 +1,14 @@
 from django.shortcuts import render, redirect
-from .models import Animal
-from .forms import AnimalForm
+from .models import *
+from .forms import *
 
 def index(request):
     return render(request, 'index.html')
 
 def animales(request):
-    return render(request, 'animales.html')
-
-def registrar(request):
-    #form = AnimalForm
-    #context = {'form' : form}
-
-    return render(request, 'registrar.html')
+    animales = Animal.objects.all()
+    print(animales)
+    context = {
+        'animales' : animales
+    }
+    return render(request, 'animales.html', context)

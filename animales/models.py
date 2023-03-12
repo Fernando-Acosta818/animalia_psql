@@ -6,15 +6,9 @@ class Filo(models.Model):
     def __str__(self):
         return self.filo
 
-class Subfilo(models.Model):
-    subfilo = models.CharField(max_length=255, blank=True, default='No subfilo')
-
-    def __str__(self):
-        return self.subfilo
-
 class Clase(models.Model):
     clase = models.CharField(max_length=255)
-    nombre = models.CharField(max_length=255)
+    nombreComun = models.CharField(max_length=255)
 
     def __str__(self):
         return self.clase
@@ -45,13 +39,13 @@ class Especie(models.Model):
 
 class Conservacion(models.Model):
     nivel = models.IntegerField()
-    nombre = models.CharField(max_length=255)
+    nombreNivel = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.nombre
+        return self.nombreNivel
 
 class Animal(models.Model):
-    nombre = models.CharField(max_length=255)
+    nombreAnimal = models.CharField(max_length=255)
     descripcion = models.TextField()
     foto1 = models.CharField(max_length=2000)
     foto2 = models.CharField(max_length=2000)
@@ -59,8 +53,8 @@ class Animal(models.Model):
     foto4 = models.CharField(max_length=2000)
     foto5 = models.CharField(max_length=2000)
     habitat = models.TextField()
+    
     filo = models.ForeignKey(Filo, on_delete=models.CASCADE)
-    subfilo = models.ForeignKey(Subfilo, on_delete=models.CASCADE)
     clase = models.ForeignKey(Clase, on_delete=models.CASCADE)
     orden = models.ForeignKey(Orden, on_delete=models.CASCADE)
     genero = models.ForeignKey(Genero, on_delete=models.CASCADE)
@@ -69,4 +63,4 @@ class Animal(models.Model):
     conservacion = models.ForeignKey(Conservacion, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.nombre
+        return self.nombreAnimal

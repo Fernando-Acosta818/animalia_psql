@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Animales</h1>
+    <div class="animales-container">
+        {% for animal in animales %}
+            <div class="animal">
+                <h3>{{ animal }}</h3>
+                <p>{{ animal.descripcion }}</p>
+                <img src="{{ animal.foto1 }}" alt="Foto 1" height="200px">
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
