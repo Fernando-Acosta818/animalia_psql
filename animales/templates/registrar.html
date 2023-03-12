@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="/animales/registrar" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" name="Registrar">
+    </form>
+{% endblock %}
