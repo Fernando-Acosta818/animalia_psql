@@ -83,10 +83,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'animalia.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+#BASE DE DATOS POSTGRESQL (PRODUCCION)
 DATABASES = {
     'default': dj_database_url.parse(env('DATABASE_URL'))
 }

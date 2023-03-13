@@ -6,6 +6,7 @@
                 <h3>{{ animal }}</h3>
                 <p>{{ animal.descripcion }}</p>
                 <img src="{{ animal.foto1 }}" alt="Foto 1" height="200px">
+                <a href="/animales/{{ animal.id }}">Ir a animal</a>
             </div>
         {% endfor %}
     </div>
