@@ -12,7 +12,7 @@ def animales(request):
     return render(request, 'animales.html', context)
 
 def animal(request, nombre):
-    animal = Animal.objects.get(nombreAnimal = nombre.capitalize())
+    animal = Animal.objects.get(nombreAnimal = nombre.capitalize().replace("-", " "))
     context = {
         'animal' : animal
     }
