@@ -11,8 +11,8 @@ def animales(request):
     }
     return render(request, 'animales.html', context)
 
-def animal(request, id):
-    animal = Animal.objects.get(id = id)
+def animal(request, nombre):
+    animal = Animal.objects.get(nombreAnimal = nombre.capitalize())
     context = {
         'animal' : animal
     }
