@@ -1,4 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>{{ animal.nombreAnimal }}</h1>
+    <hr>
+    <p>{{ animal.descripcion }}</p>
+    <hr>
+    <img src="{{ animal.foto1 }}" alt="" height="300px">
+    <hr>
+    <p>{{ animal.habitat }}</p>
+    <hr>
+    <table border="1">
+        <tr>
+            <th>Filo</th>
+            <th>Clase</th>
+            <th>Orden</th>
+            <th>Familia</th>
+            <th>Género</th>
+            <th>Especie</th>
+            <th>Estado de conservación</th>
+        </tr>
+        <tr>
+            <td>{{ animal.filo }}</td>
+            <td>{{ animal.clase }}</td>
+            <td>{{ animal.orden }}</td>
+            <td>{{ animal.familia }}</td>
+            <td>{{ animal.genero }}</td>
+            <td>{{ animal.especie }}</td>
+            <td>{{ animal.conservacion }}</td>
+        </tr>
+    </table>
+
 {% endblock %}
