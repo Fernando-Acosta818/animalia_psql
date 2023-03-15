@@ -1,13 +1,23 @@
 {% extends 'base.html' %}
 {% load spacedash %}
 {% block content %}
-    <div class="animales-container">
-        {% for animal in animales %}
-            <div class="animal">
-                <h3>{{ animal }}</h3>
-                <img src="{{ animal.foto1 }}" alt="Foto 1" height="200px">
-                <a href='/animales/{{ animal.nombreAnimal | lower | rep }}'>Ir a animal</a>
-            </div>
-        {% endfor %}
+    <div class="animales">
+        <div class="filtros">
+            <!--Espacio para filtros-->
+        </div>
+        <div class="animales-container">
+            {% for animal in animales %}
+                <div class="animal-card">
+                    <div class="animal-foto-container">
+                        <img class="animal-foto" src="{{ animal.foto1 }}" alt="Foto de {{ animal.nombreAnimal | lower }}">
+                    </div>
+                    <div class="animal-info">
+                        <h3 class="animal-nombre">{{ animal }}</h3>
+                        <h4 class="animal-especie">{{ animal.genero }} {{ animal.especie }}</h4>
+                        <a class="animal-link" href='/animales/{{ animal.nombreAnimal | lower | rep }}'>Visitar</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

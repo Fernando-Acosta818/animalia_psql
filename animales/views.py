@@ -5,7 +5,7 @@ def index(request):
     return render(request, 'index.html')
 
 def animales(request):
-    animales = Animal.objects.all()
+    animales = Animal.objects.order_by('nombreAnimal')
     context = {
         'animales' : animales
     }

@@ -6,23 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>AnimaliaMX</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Inicio</a>
-            </li>
-            <li>
-                <a href="/animales">Animales</a>
-            </li>
-            <li>
-                <a href="/admin">Sitio de admin</a>
-            </li>
-        </ul>
+    <nav id="nav">
+        <a href="/">Inicio</a>
+        <a href="/animales">Animales</a>
+        <a href="/nosotros">Nosotros</a>
+        <a href="/admin">Panel de admin</a>
+        <a href="javascript:void(0);" class="icon" onclick="nav()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
     {% block content %}
     {% endblock %}
+    <footer>
+        
+    </footer>
+    <script>
+        function nav() {
+            var x = document.getElementById("nav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }   
+    </script>
 </body>
 </html>
