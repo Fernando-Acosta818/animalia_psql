@@ -8,12 +8,12 @@
         <div class="animales-container">
             {% for animal in animales %}
                 <div class="animal-card">
-                    <div class="animal-foto-container">
-                        <img class="animal-foto" src="{{ animal.foto1 }}" alt="Foto de {{ animal.nombreAnimal | lower }}">
-                    </div>
+                    <img class="animal-foto" src="{{ animal.foto1 }}" alt="Foto de {{ animal.nombreAnimal | lower }}">   
                     <div class="animal-info">
                         <h3 class="animal-nombre">{{ animal }}</h3>
                         <h4 class="animal-especie">{{ animal.genero }} {{ animal.especie }}</h4>
+                    </div>
+                    <div>
                         <a class="animal-link" href='/animales/{{ animal.nombreAnimal | lower | rep }}'>Visitar</a>
                     </div>
                 </div>
