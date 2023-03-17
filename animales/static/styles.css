@@ -162,6 +162,21 @@ body {
     font-weight: 400;
 }
 
+@media screen and (max-width: 600px) {
+    .hero {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hero h1 {
+        font-size: 4em;
+    }
+    
+    .hero h2 {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+}
 
 
 
