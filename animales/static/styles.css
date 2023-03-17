@@ -52,11 +52,13 @@ body {
     color: #E81E5F;
 }
 
+
 /*Sección de animales*/
 
 .animales {
     background-color: #2F0050;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .animales-container {
@@ -122,3 +124,44 @@ body {
 .animal-link:hover {
     background-color: #03D494;
 }
+
+
+/* Vista de animal particular */
+
+.solo {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFF4E5;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+
+
