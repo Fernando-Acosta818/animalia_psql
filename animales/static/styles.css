@@ -181,8 +181,22 @@ body {
 /* Solo - descripcion */
 
 .info {
-    padding: 30px;
+    padding: 100px;
 }
 
+.info h2 {
+    font-size: 2em;
+}
+
+.info p {
+    font-size: 1.25em;
+    text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+    .info {
+        padding: 30px;
+    }
+}
 
 
