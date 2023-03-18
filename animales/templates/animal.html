@@ -10,8 +10,15 @@
             </div>
         </div>
         <div class="info">
-            <h2>Acerca de {{ animal.nombreAnimal | lower}}</h2>
+            <h2>Acerca de {{ animal.nombreAnimal | lower }}</h2>
             <p class="info-desc">{{ animal.descripcion | capfirst }}</p>
+        </div>
+        <div class="habitat">
+            <img class="habitat-imagen" src="{{ animal.foto2 }}" alt="Ilustración de {{ animal.nombreAnimal }}">
+            <div class="habitat-info">
+                <h2>Hábitat</h2>
+                <p>{{ animal.descripcion }}</p>
+            </div>
         </div>
     </div>
 {% endblock %}

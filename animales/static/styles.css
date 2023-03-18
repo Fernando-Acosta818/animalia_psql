@@ -199,4 +199,54 @@ body {
     }
 }
 
+/* Info de hábitat */
+.habitat {
+    background-color: #2F0050;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: fit-content;
+    padding: 30px;
+}
+
+.habitat-imagen {
+    width: 40vw;
+    border-radius: 15px;
+}
+
+.habitat-info {
+    width: 40vw;
+    color: #FFF4E5;
+    text-align: justify;
+}
+
+.habitat-info h2 {
+    font-size: 2em;
+}
+
+.habitat-info p {
+    font-size: 1.25em;
+}
+
+@media screen and (max-width: 1000px) {
+    .habitat-imagen {
+        width: 85vw;
+    }
+
+    .habitat-info {
+        width: 75vw;
+    }
+
+    .habitat-info h2 {
+        font-size: 1.70em;
+    }
+
+    .habitat-info p {
+        font-size: 1em;
+    }
+}
+
+
 
