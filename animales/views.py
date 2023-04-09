@@ -1,8 +1,19 @@
 from django.shortcuts import render
 from .models import Animal
+import random
 
 def index(request):
-    return render(request, 'index.html')
+    animal = Animal.objects.get(id = random.randint(1, len(Animal.objects.all())))
+
+    desc = animal.descripcion
+    if len(desc) > 800 :
+        desc = desc[:800] + '...'
+
+    context = {
+        'animal' : animal,
+        'desc' : desc
+    }
+    return render(request, 'index.html', context)
 
 def animales(request):
     animales = Animal.objects.order_by('nombreAnimal')

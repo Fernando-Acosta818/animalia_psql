@@ -1,4 +1,34 @@
 {% extends 'base.html' %}
+{% load spacedash %}
 {% block content %}
-    <h1>Home</h1>
+    <div class="home">
+        <div class="home-hero">
+            <div class="home-hero-inner">
+                <h1>¡Conoce la fauna de México!</h1>
+            </div>
+            <a class="home-link" href="/animales/">Animales</a>
+        </div>
+        <div class="home-datos">
+            <div class="home-datos-animales">
+                <h2 class="home-datos-num">569</h2>
+                <h3 class="home-datos-desc">Especies animales</h3>
+            </div>
+            <div class="home-datos-endemicas">
+                <h2 class="home-datos-num">23</h2>
+                <h3 class="home-datos-desc">Especies endémicas</h3>
+            </div>
+            <div class="home-datos-peligro">
+                <h2 class="home-datos-numpeligro">191</h2>
+                <h3 class="home-datos-desc">Especies en peligro de extinción</h3>
+            </div>
+        </div>
+        <div class="home-animal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url({{ animal.foto1 }});">
+            <h2 class="home-animal-nombre">{{ animal.nombreAnimal }}</h2>
+            <div class="home-animal-card">
+                <h3>{{ animal.genero }} {{ animal.especie }}</h3>
+                <p>{{ desc }} <a href="/animales/{{ animal.nombreAnimal | lower | rep }}">Ver más</a></p>
+            </div>
+            <a class="home-animal-link" href="/animales/{{ animal.nombreAnimal | lower | rep }}">Visitar animal</a>
+        </div>
+    </div>
 {% endblock %}
