@@ -389,6 +389,7 @@ body {
 
 .home-animal-card p {
     font-size: 1.5em;
+    text-align: justify;
 }
 
 .home-animal-link {
