@@ -52,6 +52,26 @@ body {
     color: #E81E5F;
 }
 
+footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: #FFFFFF;
+}
+
+footer a:hover {
+    color: #03D494;
+}
 
 /*Sección de animales*/
 
