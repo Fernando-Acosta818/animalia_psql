@@ -15,6 +15,9 @@ def index(request):
     }
     return render(request, 'index.html', context)
 
+def nosotros(request):
+    return render(request, 'nosotros.html')
+
 def animales(request):
     animales = Animal.objects.order_by('nombreAnimal')
     context = {

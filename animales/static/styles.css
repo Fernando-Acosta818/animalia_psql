@@ -74,6 +74,44 @@ footer a:hover {
     color: #03D494;
 }
 
+/* Sección de Nosotros */
+
+.nosotros {
+    background-color: #3b214e;
+    padding: 30px;
+    color: #FFFFFF;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.nos-unam, .nos-fesc, .nos-info {
+    width: 250px;
+}
+
+.nos-logo {
+    height: 250px;
+}
+
+.nos-titulo, .nos-int, .nos-desc {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.nos-desc, .nos-int {
+    font-size: 1.5em;
+}
+
+.nos-int h4 {
+    font-weight: 400;
+}
+
 /*Sección de animales*/
 
 .animales {

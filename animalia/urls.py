@@ -19,6 +19,7 @@ from animales import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('nosotros/', views.nosotros, name='nosotros'),
     path('', views.index, name='home'),
     path('animales/', views.animales, name='animales'),
     path('animales/<str:nombre>', views.animal, name='animal')
