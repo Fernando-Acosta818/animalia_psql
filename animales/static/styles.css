@@ -248,6 +248,71 @@ body {
     }
 }
 
+.tabla-container {
+    padding: 30px;
+    background-color: #139F6E;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabla {
+    font-size: 1.5em;
+    border-collapse: collapse;
+    text-align: center;
+    height: 100%;
+}
+
+.tabla th, .tabla td {
+    padding: 10px 15px;
+    width: 140px;
+    height: 70px;
+}
+
+.tabla th {
+    background-color: #FCA201;
+    color: #2F0050;
+}
+
+.tabla td {
+    background-color: #FFF4E5;
+    color: #2F0050;
+}
+
+.tabla-esquina-si {
+    border-radius: 15px 0 0 0;
+}
+
+.tabla-esquina-sd {
+    border-radius: 0 15px 0 0;
+}
+
+.tabla-esquina-id {
+    border-radius: 0 0 15px 0;
+}
+
+.tabla-esquina-ii {
+    border-radius: 0 0 0 15px;
+}
+
+.tabla-img {
+    border-radius: 15px;
+    max-width: 50%;
+    max-height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .tabla {
+        font-size: 1.2em;
+    }
+
+    .tabla-img {
+        max-width: 100%;
+    }
+}
+
 /*******************/
 /* Estilos de Home */
 

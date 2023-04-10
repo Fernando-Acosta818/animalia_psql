@@ -20,5 +20,34 @@
                 <p>{{ animal.habitat }}</p>
             </div>
         </div>
+        <div class="tabla-container">
+            <table class="tabla">
+                <tr>
+                    <th class="tabla-esquina-si">Filo</th>
+                    <td  class="tabla-esquina-sd">{{ animal.filo }}</td>
+                </tr>
+                <tr>
+                    <th>Clase</th>
+                    <td>{{ animal.clase }}</td>
+                </tr>
+                <tr>
+                    <th>Orden</th>
+                    <td>{{ animal.orden }}</td>
+                </tr>
+                <tr>
+                    <th>Familia</th>
+                    <td>{{ animal.familia }}</td>
+                </tr>
+                <tr>
+                    <th>Género</th>
+                    <td>{{ animal.genero }}</td>
+                </tr>
+                <tr>
+                    <th class="tabla-esquina-ii">Especie</th>
+                    <td class="tabla-esquina-id">{{ animal.especie }}</td>
+                </tr>
+            </table>
+            <img class="tabla-img" src="{{ animal.foto3 }}" alt="Tercera foto de {{ animal.nombreAnimal }}">
+        </div>
     </div>
 {% endblock %}
