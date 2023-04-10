@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
     <div class="nosotros">
         <div class="logos">
             <div class="nos-unam">
-                <img class="nos-logo" src="http://informatica.cuautitlan.unam.mx/logos/logo1.png" alt="Logo UNAM Cuautitlán">
+                <img class="nos-logo" src="{% static 'logos/logo1.png' %}" alt="Logo UNAM Cuautitlán">
                 <h3>Universidad Nacional Autónoma de México</h3>
             </div>
             <div class="nos-fesc">
-                <img class="nos-logo" src="http://informatica.cuautitlan.unam.mx/logos/logo2.png" alt="Logo FESC Informática">
+                <img class="nos-logo" src="{% static 'logos/logo2.png' %}" alt="Logo FESC Informática">
                 <h3>Facultad de estudios Superiores Cuautitlán</h3>
             </div>
             <div class="nos-info">
-                <img class="nos-logo" src="http://informatica.cuautitlan.unam.mx/logos/logo3.png" alt="Logo Informática">
+                <img class="nos-logo" src="{% static 'logos/logo3.png' %}" alt="Logo Informática">
                 <h3>Licenciatura en Informática</h3>
             </div>
         </div>
